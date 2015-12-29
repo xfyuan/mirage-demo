@@ -42,6 +42,9 @@ export default function() {
     this.post('/contacts');
     this.post('/contacts', 'user'); // specify the type of resource to be created
   */
+  this.post('/cars', (db, req)=> {
+    return JSON.parse(req.requestBody);
+  });
 
   /*
     PUT shorthands
