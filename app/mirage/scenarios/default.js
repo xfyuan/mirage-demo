@@ -4,4 +4,5 @@ export default function(server) {
   // data will not be loaded in your tests.
 
   server.createList('car', 10);
+  server.createList('part', 5);
 }

@@ -2,6 +2,11 @@ Parts
 
 <ul>
   {{model.name}}
+
+  {{#link-to 'car.new-part' model class='new-part'}}
+    Add new part
+  {{/link-to}}
+
   {{#each model.parts as |part|}}
     <li class="part">
       {{part.name}}

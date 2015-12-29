@@ -99,6 +99,10 @@ export default function() {
     return JSON.parse(req.requestBody);
   });
 
+  this.post('parts', (db, req)=> {
+    return JSON.parse(req.requestBody);
+  });
+
   /*
     PUT shorthands
 
