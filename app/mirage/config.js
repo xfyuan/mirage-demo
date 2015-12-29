@@ -27,6 +27,14 @@ export default function() {
     this.get('/contacts/:id', 'user');
     this.get('/contacts/:id', ['contact', 'addresses']);
   */
+  this.get('/cars', (db)=> {
+    let data = {};
+    data = db.cars.map((attrs)=> {
+      let rec = { type: 'cars', id: attrs.id, attributes: attrs };
+      return rec;
+    });
+    return { data };
+  });
 
   /*
     POST shorthands
